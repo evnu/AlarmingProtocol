@@ -42,9 +42,9 @@ appLayer = blockMember-&gt;getBlockMember("app");</Text>
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB30" type="sdlState" xCenter="671" yCenter="165" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB30" type="sdlState" xCenter="627" yCenter="275" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>initialised</Text>
+<Text>eventLoop</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB31" type="sdlInputSig" xCenter="627" yCenter="363" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
@@ -52,7 +52,7 @@ appLayer = blockMember-&gt;getBlockMember("app");</Text>
 <Text>broadcast(message)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB32" type="sdlText" xCenter="704" yCenter="308" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ff0000">
+<Symbol symbolId="SYMB32" type="sdlText" xCenter="836" yCenter="341" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ff0000">
 <Description></Description>
 <Text>/* TODO unicast */</Text>
 <ShortcutText>Todo Unicast</ShortcutText>
@@ -63,9 +63,9 @@ appLayer = blockMember-&gt;getBlockMember("app");</Text>
 <Text>mAlert(message.payload.cnt) TO_ID appLayer</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB34" type="sdlState" xCenter="627" yCenter="715" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB34" type="sdlState" xCenter="1023" yCenter="770" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>initialised</Text>
+<Text>-</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB4" type="sdlState" xCenter="220" yCenter="275" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
@@ -83,14 +83,19 @@ appLayer = blockMember-&gt;getBlockMember("app");</Text>
 <Text>mFalseAlert(message.payload.appLayer) TO_ID appLayer</Text>
 </Symbol>
 
+<Symbol symbolId="SYMB47" type="sdlSendSig" xCenter="1375" yCenter="638" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>mReawake TO_ID appLayer</Text>
+</Symbol>
+
 <Symbol symbolId="SYMB5" type="sdlSaveSig" xCenter="352" yCenter="352" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>*</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="sdlState" xCenter="220" yCenter="572" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlState" xCenter="220" yCenter="572" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>initialised</Text>
+<Text>eventLoop</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB8" type="sdlText" xCenter="440" yCenter="66" fixedDimensions="FALSE" width="242" height="110" color="#000000" fillColor="#ffffff">
@@ -195,7 +200,7 @@ RTDS_QueueId receivingEntity;</Text>
 
 </Link>
 
-<Link linkId="LINK121" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK268" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -205,9 +210,7 @@ RTDS_QueueId receivingEntity;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="77"/>
-<LinkSegment orientation="h" length="-44"/>
-<LinkSegment orientation="v" length="121"/>
+<LinkSegment orientation="v" length="88"/>
 
 </Link>
 
@@ -225,7 +228,7 @@ RTDS_QueueId receivingEntity;</Text>
 
 </Link>
 
-<Link linkId="LINK164" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK259" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB33" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -235,7 +238,9 @@ RTDS_QueueId receivingEntity;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="77"/>
+<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="h" length="396"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 
@@ -299,7 +304,23 @@ RTDS_QueueId receivingEntity;</Text>
 
 </Link>
 
-<Link linkId="LINK162" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK173" type="dec" textSegmentNum="2" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>REAWAKE</Text>
+<Connector attachedSymbolId="SYMB41" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB47" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="h" length="748"/>
+<LinkSegment orientation="v" length="132"/>
+
+</Link>
+
+<Link linkId="LINK258" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB42" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -309,9 +330,23 @@ RTDS_QueueId receivingEntity;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="33"/>
-<LinkSegment orientation="h" length="-396"/>
-<LinkSegment orientation="v" length="44"/>
+<LinkSegment orientation="v" length="132"/>
+
+</Link>
+
+<Link linkId="LINK260" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB47" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB34" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="h" length="-352"/>
+<LinkSegment orientation="v" length="66"/>
 
 </Link>
 

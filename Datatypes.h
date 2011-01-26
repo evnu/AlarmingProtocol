@@ -24,7 +24,7 @@ enum MessageType {
 typedef struct TransportMessage {
   MessageType mark;
   
-  union payload_t {
+  union Pay {
     int cnt;
     RTDS_QueueId appLayer;
   } payload;
