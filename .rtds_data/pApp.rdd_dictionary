@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl-rt" diagramType="prcstype">
+<Signal id="SIG1" name="hello">
+<InputSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</InputSymbols>
+</Signal>
+<Item id="ITEM1" type="process_class" name="pApp" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+</ReceivedSignals>
+<Transitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB7"/>
+</Transition>
+</Transitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="waitForInit" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

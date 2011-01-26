@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl-rt" type="class" name="InterfaceDefinition" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
+
+<Symbol symbolId="SYMB1" type="umlClassDgmFrm" xCenter="538" yCenter="364" fixedDimensions="TRUE" width="1033" height="662" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB2" type="umlPrcsCls" xCenter="253" yCenter="110" fixedDimensions="FALSE" width="308" height="110" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text id="0">pApp</Text>
+<Text id="1" hidden="FALSE">      </Text>
+<Text id="2" hidden="FALSE">&gt;hello(in p1 : BlockMemberPtr) {via:aGW}
+&gt;alert(in p1 : int) {via: aGw}</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="umlBlkCls" xCenter="286" yCenter="517" fixedDimensions="FALSE" width="418" height="154" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text id="0">NodeBlockClass</Text>
+<Text id="1" hidden="FALSE">      </Text>
+<Text id="2" hidden="FALSE">&lt;nodeHello(in p1 : RTDS_QueueId) {via:aChanGW}
+&gt;submitTopology(in p1 : NetworkTopologyPtr) {via:aChanGW}
+&gt;broadcast(in p1 : int) {via:nodesGW}
+&gt;unicast(in p1 : int) {via:nodesGW}
+&lt;broadcast(in p1 : int) {via:nodesGW}
+&lt;unicast(in p1 : int) {via:nodesGW}</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="umlPrcsCls" xCenter="286" yCenter="297" fixedDimensions="FALSE" width="418" height="154" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text id="0">pTransportSender</Text>
+<Text id="1" hidden="FALSE">      </Text>
+<Text id="2" hidden="FALSE">&gt;hello(in p1 : BlockMemberPtr) {via:tGW}
+&gt;submitTopology(in p1 : NetworkTopologyPtr) {via:tGW}
+&lt;unicast(in p1 : int) {via:nGW}
+&lt;broadcast(in p1 : int) {via:nGW}
+&lt;alert(in p1 : int) {via:tGW}</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="umlPrcsCls" xCenter="759" yCenter="297" fixedDimensions="FALSE" width="440" height="154" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text id="0">pTransportReceiver</Text>
+<Text id="1" hidden="FALSE">      </Text>
+<Text id="2" hidden="FALSE">&gt;hello(in p1 : BlockMemberPtr) {via:tGW}
+&gt;submitTopology(in p1 : NetworkTopologyPtr) {via:adminGW}
+&lt;submitTopology(in p1 : NetworkTopologyPtr) {via:tGW}
+&gt;broadcast(in p1 : int) {via:nGW}
+&gt;unicast(in p1 : int) {via:nGW}</Text>
+</Symbol>
+</Symbol>
+</DiagramPartition>
+
+</Diagram>

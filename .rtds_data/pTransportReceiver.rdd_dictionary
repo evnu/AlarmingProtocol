@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl-rt" diagramType="prcstype">
+<Signal id="SIG1" name="hello">
+<SignalParameterType>BlockMemberPtr</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB9"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="broadcast">
+<SignalParameterType>int</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB31"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG3" name="alert">
+<SignalParameterType>int</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB33"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG4" name="submitTopology">
+<SignalParameterType>NetworkTopologyPtr</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB22"/>
+</SendSymbols>
+<InputSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</InputSymbols>
+</Signal>
+<Item id="ITEM1" type="process_class" name="pTransportReceiver" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<SentSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+<Transitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB11"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM3"/>
+<SymbolReference symbolId="SYMB9"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB2"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM4"/>
+<SymbolReference symbolId="SYMB5"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB31"/>
+</Transition>
+</Transitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="initialised" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB30"/>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB6"/>
+<SymbolReference symbolId="SYMB34"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="state" name="waitForHello" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB12"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB12"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM4" type="state" name="waitForTopology" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB4"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

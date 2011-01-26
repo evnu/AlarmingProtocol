@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl-rt" diagramType="prcs">
+<Signal id="SIG1" name="nodeHello">
+<SignalParameterType>RTDS_QueueId</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="submitTopology">
+<SignalParameterType>NetworkTopologyPtr</SignalParameterType>
+<SendSymbols>
+<SymbolReference symbolId="SYMB35"/>
+</SendSymbols>
+</Signal>
+<Item id="ITEM1" type="process" name="Admin" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB1"/>
+</UsingSymbols>
+<Body>
+<SentSignals>
+<SignalReference id="SIG2"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG1"/>
+</ReceivedSignals>
+<Transitions>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB7"/>
+</Transition>
+</Transitions>
+</Body>
+</Item>
+<Item id="ITEM2" type="state" name="initializationPhase" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB6"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB6"/>
+<SymbolReference symbolId="SYMB13"/>
+</UsingSymbols>
+</Item>
+<Item id="ITEM3" type="connector" name="submitLoop" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB50"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB49"/>
+</UsingSymbols>
+</Item>
+</DictionaryObjects>

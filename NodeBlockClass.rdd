@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl-rt" type="blktype" name="NodeBlockClass" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
+<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
+
+<Symbol symbolId="SYMB1" type="sdlBlkTypeDgmFrm" xCenter="538" yCenter="364" fixedDimensions="TRUE" width="1033" height="662" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB2" type="sdlPrcs" xCenter="407" yCenter="132" fixedDimensions="TRUE" width="110" height="88" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>Creator</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="sdlPrcsTypeInst" xCenter="407" yCenter="297" fixedDimensions="TRUE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>app : pApp(0)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlText" xCenter="99" yCenter="44" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>#include &lt;iostream&gt;</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB6" type="sdlPrcsTypeInst" xCenter="440" yCenter="550" fixedDimensions="TRUE" width="330" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>transport_sender : pTransportSender(0)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB7" type="sdlPrcsTypeInst" xCenter="836" yCenter="462" fixedDimensions="TRUE" width="374" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>transport_receiver : pTransportReceiver(0)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB8" type="sdlText" xCenter="715" yCenter="616" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#00ff00">
+<Description></Description>
+<Text>/*
+Signals
+
+broadcast(int x) where x is the number of received broadcasts. 
+0 indicates begin of alarm.
+
+unicast(int x) see above.
+
+*/</Text>
+<ShortcutText>Comments on signals</ShortcutText>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK129" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>adminChan</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="n" position="-0.211035818006" endType="midarrow">
+<Text id="1">[nodeHello]</Text>
+<Text id="2">aChanGW</Text>
+</Connector>
+<LinkSegment orientation="v" length="-132"/>
+
+</Link>
+
+<Link linkId="LINK247" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>chanA</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.5" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[hello]</Text>
+<Text id="2">aGW</Text>
+</Connector>
+<LinkSegment orientation="h" length="-154"/>
+<LinkSegment orientation="v" length="143"/>
+<LinkSegment orientation="h" length="154"/>
+
+</Link>
+
+<Link linkId="LINK244" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>chanTS</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="-0.5" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB6" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[hello]</Text>
+<Text id="2">tGW</Text>
+</Connector>
+<LinkSegment orientation="h" length="-264"/>
+<LinkSegment orientation="v" length="440"/>
+<LinkSegment orientation="h" length="297"/>
+
+</Link>
+
+<Link linkId="LINK241" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>chanTR</Text>
+<Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB7" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[hello]</Text>
+<Text id="2">tGW</Text>
+</Connector>
+<LinkSegment orientation="h" length="-209"/>
+<LinkSegment orientation="v" length="330"/>
+<LinkSegment orientation="h" length="638"/>
+
+</Link>
+
+<Link linkId="LINK246" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>toNodes</Text>
+<Connector attachedSymbolId="SYMB6" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">nGW</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="-0.147144240077" endType="midarrow">
+<Text id="1">[broadcast, unicast]</Text>
+<Text id="2">nodesGW</Text>
+</Connector>
+<LinkSegment orientation="v" length="121"/>
+
+</Link>
+
+<Link linkId="LINK243" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>adminChan3</Text>
+<Connector attachedSymbolId="SYMB7" type="chnlgate" isOutside="TRUE" side="x" position="0.647058823529" endType="midarrow">
+<Text id="1">[submitTopology]</Text>
+<Text id="2">adminGW</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.853823814134" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">aChanGW</Text>
+</Connector>
+<LinkSegment orientation="v" length="209"/>
+
+</Link>
+
+<Link linkId="LINK240" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>fromNodes</Text>
+<Connector attachedSymbolId="SYMB7" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[broadcast, unicast]</Text>
+<Text id="2">nGW</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.619554695063" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">nodesGW</Text>
+</Connector>
+<LinkSegment orientation="v" length="209"/>
+
+</Link>
+
+<Link linkId="LINK245" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>senderReceiverChan</Text>
+<Connector attachedSymbolId="SYMB7" type="chnlgate" isOutside="TRUE" side="y" position="0.666666666667" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">tGW</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB6" type="chnlgate" isOutside="TRUE" side="x" position="-0.266666666667" endType="midarrow">
+<Text id="1">[submitTopology]</Text>
+<Text id="2">tGW</Text>
+</Connector>
+<LinkSegment orientation="h" length="-440"/>
+<LinkSegment orientation="v" length="66"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>
