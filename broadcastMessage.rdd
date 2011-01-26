@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Diagram SYSTEM "rtdsDiagram.dtd">
+
+<Diagram language="sdl-rt" type="prcd" name="broadcastMessage" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
+
+<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
+<PageSpecification pageWidth="21" pageHeight="29.7" topMargin="0" bottomMargin="0" leftMargin="0" rightMargin="0" pageFooter="FALSE"/>
+
+<Symbol symbolId="SYMB2" type="sdlPrcdDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+
+<Symbol symbolId="SYMB11" type="sdlDecision" xCenter="363" yCenter="396" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>SELF != (*it)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB12" type="sdlTask" xCenter="363" yCenter="583" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>++it;</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB13" type="sdlSendSig" xCenter="495" yCenter="506" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>broadcast(m) TO_ID (*it)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB3" type="sdlPrcdProto" xCenter="242" yCenter="66" fixedDimensions="TRUE" width="462" height="88" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>broadcastMessage(NetworkTopologyPtr ptr, TransportMessage m)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="sdlPrcdStart" xCenter="209" yCenter="209" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+</Symbol>
+
+<Symbol symbolId="SYMB5" type="sdlPrcdReturn" xCenter="209" yCenter="451" fixedDimensions="FALSE" width="22" height="22" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>  </Text>
+</Symbol>
+
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="374" yCenter="154" fixedDimensions="FALSE" width="374" height="66" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>RefList refs = ptr-&gt;getAllConnectedReferences();
+RefListIt it = refs.begin();</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB9" type="sdlDecision" xCenter="209" yCenter="308" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>it != refs.end()</Text>
+</Symbol>
+</Symbol>
+
+<Link linkId="LINK146" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>false</Text>
+<Connector attachedSymbolId="SYMB11" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="187"/>
+
+</Link>
+
+<Link linkId="LINK148" type="dec" textSegmentNum="1" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>true</Text>
+<Connector attachedSymbolId="SYMB11" type="void" isOutside="TRUE" side="y" position="1.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB13" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="132"/>
+<LinkSegment orientation="v" length="88"/>
+
+</Link>
+
+<Link linkId="LINK135" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB12" type="void" isOutside="TRUE" side="y" position="0.5" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB9" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="-253"/>
+<LinkSegment orientation="v" length="-330"/>
+<LinkSegment orientation="h" length="99"/>
+<LinkSegment orientation="v" length="44"/>
+
+</Link>
+
+<Link linkId="LINK117" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB13" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="33"/>
+<LinkSegment orientation="h" length="-132"/>
+<LinkSegment orientation="v" length="44"/>
+
+</Link>
+
+<Link linkId="LINK142" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB4" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB9" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="99"/>
+
+</Link>
+
+<Link linkId="LINK147" type="dec" textSegmentNum="2" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>true</Text>
+<Connector attachedSymbolId="SYMB9" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB11" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="33"/>
+<LinkSegment orientation="h" length="154"/>
+<LinkSegment orientation="v" length="55"/>
+
+</Link>
+
+<Link linkId="LINK29" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>false</Text>
+<Connector attachedSymbolId="SYMB9" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="143"/>
+
+</Link>
+</DiagramPartition>
+
+</Diagram>

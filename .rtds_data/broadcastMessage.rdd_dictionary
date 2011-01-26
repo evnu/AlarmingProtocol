@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
+
+<DictionaryObjects language="sdl-rt" diagramType="prcd">
+<Signal id="SIG1" name="broadcast">
+<SendSymbols>
+<SymbolReference symbolId="SYMB13"/>
+</SendSymbols>
+</Signal>
+<Item id="ITEM1" type="procedure" name="broadcastMessage" scope="current">
+<UsingSymbols>
+<SymbolReference symbolId="SYMB2"/>
+</UsingSymbols>
+<Prototype>
+<PrototypeSymbol>
+<SymbolReference symbolId="SYMB3"/>
+<PrototypeText>broadcastMessage(NetworkTopologyPtr ptr, TransportMessage m)</PrototypeText>
+</PrototypeSymbol>
+</Prototype>
+<Body>
+<SentSignals>
+<SignalReference id="SIG1"/>
+</SentSignals>
+</Body>
+</Item>
+</DictionaryObjects>
