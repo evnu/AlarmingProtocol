@@ -26,7 +26,7 @@
 <Text>*</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB19" type="sdlState" xCenter="594" yCenter="154" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#00ffff">
+<Symbol symbolId="SYMB19" type="sdlState" xCenter="572" yCenter="242" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#00ffff">
 <Description></Description>
 <Text>initialised</Text>
 </Symbol>
@@ -36,13 +36,40 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB20" type="sdlText" xCenter="572" yCenter="242" fixedDimensions="FALSE" width="176" height="110" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB20" type="sdlText" xCenter="638" yCenter="132" fixedDimensions="FALSE" width="176" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/*
 todos
 get msg from app
 forward msg from app
 */</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB27" type="sdlInputSig" xCenter="572" yCenter="319" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>mAlert(cnt)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB28" type="sdlTask" xCenter="572" yCenter="396" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>msg.mark = ALERT;
+msg.payload.cnt = cnt;</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB29" type="sdlPrcdCall" xCenter="572" yCenter="473" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>broadcastMessage(topology, msg)</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB30" type="sdlState" xCenter="572" yCenter="550" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>initialised</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB31" type="sdlPrcdDecl" xCenter="748" yCenter="33" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>broadcastMessage(NetworkTopologyPtr ptr,
+ TransportMessage msg)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB4" type="sdlState" xCenter="220" yCenter="198" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
@@ -55,12 +82,13 @@ forward msg from app
 <Text>hello(blockMember)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="418" yCenter="55" fixedDimensions="FALSE" width="220" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="418" yCenter="66" fixedDimensions="FALSE" width="220" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>BlockMember* blockMember;
 NetworkTopologyPtr topology;
-int i;
-RTDS_QueueId receiver;</Text>
+int cnt;
+RTDS_QueueId receiver;
+TransportMessage msg;</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB8" type="sdlState" xCenter="220" yCenter="352" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
@@ -88,6 +116,20 @@ RTDS_QueueId receiver;</Text>
 
 </Link>
 
+<Link linkId="LINK12" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB19" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB27" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
 <Link linkId="LINK1" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB2" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
@@ -95,6 +137,48 @@ RTDS_QueueId receiver;</Text>
 <Text id="2"></Text>
 </Connector>
 <Connector attachedSymbolId="SYMB4" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK13" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB27" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB28" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK14" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB28" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB29" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK15" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB29" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB30" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

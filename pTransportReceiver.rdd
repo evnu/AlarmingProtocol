@@ -58,9 +58,9 @@ appLayer = blockMember-&gt;getBlockMember("app");</Text>
 <ShortcutText>Todo Unicast</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB33" type="sdlSendSig" xCenter="627" yCenter="638" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB33" type="sdlSendSig" xCenter="627" yCenter="638" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>mAlert(message.payload.cnt) TO_ID SELF</Text>
+<Text>mAlert(message.payload.cnt) TO_ID appLayer</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB34" type="sdlState" xCenter="627" yCenter="715" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
@@ -78,9 +78,9 @@ appLayer = blockMember-&gt;getBlockMember("app");</Text>
 <Text>message.mark</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB42" type="sdlSendSig" xCenter="1023" yCenter="638" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB42" type="sdlSendSig" xCenter="1023" yCenter="638" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>mFalseAlert(message.payload.appLayer) TO_ID SELF</Text>
+<Text>mFalseAlert(message.payload.appLayer) TO_ID appLayer</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB5" type="sdlSaveSig" xCenter="352" yCenter="352" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
@@ -225,7 +225,7 @@ RTDS_QueueId receivingEntity;</Text>
 
 </Link>
 
-<Link linkId="LINK122" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK164" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB33" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -269,7 +269,7 @@ RTDS_QueueId receivingEntity;</Text>
 
 </Link>
 
-<Link linkId="LINK145" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK165" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>ALERT</Text>
 <Connector attachedSymbolId="SYMB41" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
