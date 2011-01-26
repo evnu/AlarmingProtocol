@@ -1,5 +1,0 @@
-MESSAGE hello(BlockMemberPtr);
-MESSAGE nodeHello(RTDS_QueueId);
-MESSAGE submitTopology(NetworkTopologyPtr);
-MESSAGE broadcast(TransportMessage), unicast(TransportMessage);
-MESSAGE mAlert(int), mFalseAlert(RTDS_QueueId), mReawake(int);
