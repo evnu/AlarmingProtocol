@@ -4,22 +4,25 @@
 
 <DictionaryObjects language="sdl-rt">
 <Signal id="SIG1" name="broadcast">
-<SignalParameterType>int</SignalParameterType>
+<SignalParameterType>TransportMessage</SignalParameterType>
 </Signal>
-<Signal id="SIG2" name="submitTopology">
-<SignalParameterType>NetworkTopologyPtr</SignalParameterType>
-</Signal>
-<Signal id="SIG3" name="mAlert">
-<SignalParameterType>int</SignalParameterType>
-</Signal>
-<Signal id="SIG4" name="unicast">
-<SignalParameterType>int</SignalParameterType>
-</Signal>
-<Signal id="SIG5" name="nodeHello">
+<Signal id="SIG2" name="mFalseAlert">
 <SignalParameterType>RTDS_QueueId</SignalParameterType>
 </Signal>
-<Signal id="SIG6" name="hello">
+<Signal id="SIG3" name="nodeHello">
+<SignalParameterType>RTDS_QueueId</SignalParameterType>
+</Signal>
+<Signal id="SIG4" name="unicast">
+<SignalParameterType>TransportMessage</SignalParameterType>
+</Signal>
+<Signal id="SIG5" name="hello">
 <SignalParameterType>BlockMemberPtr</SignalParameterType>
+</Signal>
+<Signal id="SIG6" name="mAlert">
+<SignalParameterType>int</SignalParameterType>
+</Signal>
+<Signal id="SIG7" name="submitTopology">
+<SignalParameterType>NetworkTopologyPtr</SignalParameterType>
 </Signal>
 <Item id="ITEM1" type="package" name="NetworkPackage" scope="current">
 </Item>

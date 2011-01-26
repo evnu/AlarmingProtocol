@@ -65,9 +65,9 @@ T ticks, reset
 <Text>waitForResponse</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB35" type="sdlInputSig" xCenter="583" yCenter="770" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB35" type="sdlInputSig" xCenter="583" yCenter="770" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>timeout</Text>
+<Text>*</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB36" type="sdlState" xCenter="583" yCenter="847" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">

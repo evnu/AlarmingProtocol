@@ -3,7 +3,13 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl-rt" diagramType="prcstype">
-<Signal id="SIG1" name="mAlert">
+<Signal id="SIG1" name="hello">
+<SignalParameterType>BlockMemberPtr</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="mAlert">
 <SignalParameterType>int</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB31"/>
@@ -13,16 +19,7 @@
 <SymbolReference symbolId="SYMB22"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG2" name="timeout" isTimer="TRUE">
-<InputSymbols>
-<SymbolReference symbolId="SYMB35"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG3" name="hello">
-<SignalParameterType>BlockMemberPtr</SignalParameterType>
-<InputSymbols>
-<SymbolReference symbolId="SYMB7"/>
-</InputSymbols>
+<Signal id="SIG3" name="timeout" isTimer="TRUE">
 </Signal>
 <Item id="ITEM1" type="process_class" name="pApp" scope="current">
 <UsingSymbols>
@@ -30,12 +27,11 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
-<SignalReference id="SIG3"/>
 <SignalReference id="SIG2"/>
 </ReceivedSignals>
 <Transitions>
@@ -45,15 +41,15 @@
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM6"/>
-<SymbolReference symbolId="SYMB7"/>
-</Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM5"/>
 <SymbolReference symbolId="SYMB35"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM5"/>
+<StateReference itemId="ITEM6"/>
 <SymbolReference symbolId="SYMB38"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM5"/>
+<SymbolReference symbolId="SYMB7"/>
 </Transition>
 </Transitions>
 </Body>
@@ -81,20 +77,20 @@
 <SymbolReference symbolId="SYMB33"/>
 </DefiningSymbols>
 </Item>
-<Item id="ITEM5" type="state" name="waitForResponse" parentId="ITEM1" scope="none">
+<Item id="ITEM5" type="state" name="appWaitForInit" parentId="ITEM1" scope="none">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB34"/>
+<SymbolReference symbolId="SYMB5"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB34"/>
+<SymbolReference symbolId="SYMB5"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM6" type="state" name="appWaitForInit" parentId="ITEM1" scope="none">
+<Item id="ITEM6" type="state" name="waitForResponse" parentId="ITEM1" scope="none">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB5"/>
+<SymbolReference symbolId="SYMB34"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB5"/>
+<SymbolReference symbolId="SYMB34"/>
 </UsingSymbols>
 </Item>
 </DictionaryObjects>

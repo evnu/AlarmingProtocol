@@ -11,6 +11,11 @@
 <Description></Description>
 <Text></Text>
 
+<Symbol symbolId="SYMB10" type="sdlPrcs" xCenter="77" yCenter="187" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>pAlarming</Text>
+</Symbol>
+
 <Symbol symbolId="SYMB2" type="sdlInherits" xCenter="88" yCenter="55" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>USE NetworkPackage;</Text>
@@ -58,17 +63,18 @@
 
 </Link>
 
-<Link linkId="LINK90" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cAlarmCh1</Text>
-<Connector attachedSymbolId="SYMB3" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
-<Text id="1">[broadcast, unicast]</Text>
-<Text id="2">nodesGW</Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.16918429003" endType="midarrow">
+<Link linkId="LINK99" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cAlarmChannel</Text>
+<Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="-352"/>
+<Connector attachedSymbolId="SYMB3" type="chnlgate" isOutside="TRUE" side="y" position="0.25" endType="midarrow">
+<Text id="1">[broadcast, unicast]</Text>
+<Text id="2">nodesGW</Text>
+</Connector>
+<LinkSegment orientation="v" length="99"/>
+<LinkSegment orientation="h" length="264"/>
 
 </Link>
 

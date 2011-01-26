@@ -11,13 +11,15 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB2" type="umlPrcsCls" xCenter="253" yCenter="110" fixedDimensions="FALSE" width="308" height="132" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="umlPrcsCls" xCenter="253" yCenter="110" fixedDimensions="FALSE" width="308" height="154" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text id="0">pApp</Text>
 <Text id="1" hidden="FALSE">      </Text>
 <Text id="2" hidden="FALSE">&gt;hello(in p1 : BlockMemberPtr) {via:aGW}
 &gt;mAlert(in p1 : int) {via: aGW}
-&lt;mAlert(in p1 : int) {via: aGW}</Text>
+&lt;mAlert(in p1 : int) {via: aGW}
+&gt;mFalseAlert(in p1 : int) {via: aGW}
+&lt;mFalseAlert(in p1 : int) {via: aGW}</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB4" type="umlBlkCls" xCenter="286" yCenter="517" fixedDimensions="FALSE" width="418" height="154" color="#000000" fillColor="#ffffff">
@@ -43,7 +45,7 @@
 &gt;mAlert(in p1 : int) {via:tGW}</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="umlPrcsCls" xCenter="759" yCenter="297" fixedDimensions="FALSE" width="440" height="154" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="umlPrcsCls" xCenter="759" yCenter="297" fixedDimensions="FALSE" width="440" height="176" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text id="0">pTransportReceiver</Text>
 <Text id="1" hidden="FALSE">      </Text>
@@ -52,7 +54,8 @@
 &lt;submitTopology(in p1 : NetworkTopologyPtr) {via:tGW}
 &gt;broadcast(in p1 : int) {via:nGW}
 &gt;unicast(in p1 : int) {via:nGW}
-&lt;mAlert(in p1 : int) {via:tGW}</Text>
+&lt;mAlert(in p1 : int) {via:tGW}
+&lt;mFalseAlert(in p1 : int) {via:tGW}</Text>
 </Symbol>
 </Symbol>
 </DiagramPartition>
