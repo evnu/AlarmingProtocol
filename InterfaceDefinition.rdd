@@ -11,7 +11,7 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB2" type="umlPrcsCls" xCenter="253" yCenter="110" fixedDimensions="FALSE" width="308" height="154" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="umlPrcsCls" xCenter="264" yCenter="110" fixedDimensions="FALSE" width="308" height="154" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text id="0">pApp</Text>
 <Text id="1" hidden="FALSE">      </Text>

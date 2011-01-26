@@ -83,9 +83,9 @@ appLayer = blockMember-&gt;getBlockMember("app");</Text>
 <Text>mFalseAlert(message.payload.appLayer) TO_ID appLayer</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB47" type="sdlSendSig" xCenter="1375" yCenter="638" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB47" type="sdlSendSig" xCenter="1375" yCenter="638" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>mReawake TO_ID appLayer</Text>
+<Text>mReawake(0) TO_ID appLayer</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB5" type="sdlSaveSig" xCenter="352" yCenter="352" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
