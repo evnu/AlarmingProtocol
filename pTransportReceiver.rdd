@@ -57,9 +57,9 @@
 <ShortcutText>Todo Unicast</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB33" type="sdlSendSig" xCenter="627" yCenter="561" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB33" type="sdlSendSig" xCenter="627" yCenter="561" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>alert(i) TO_ID receivingEntity</Text>
+<Text>mAlert(i) TO_ID receivingEntity</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB34" type="sdlState" xCenter="627" yCenter="638" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">

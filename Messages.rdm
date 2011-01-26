@@ -2,4 +2,4 @@ MESSAGE hello(BlockMemberPtr);
 MESSAGE nodeHello(RTDS_QueueId);
 MESSAGE submitTopology(NetworkTopologyPtr);
 MESSAGE broadcast(int), unicast(int); 
-MESSAGE alert(int);
+MESSAGE mAlert(int);

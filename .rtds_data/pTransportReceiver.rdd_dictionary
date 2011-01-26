@@ -4,11 +4,19 @@
 
 <DictionaryObjects language="sdl-rt" diagramType="prcstype">
 <Signal id="SIG1" name="hello">
+<SignalParameterType>BlockMemberPtr</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB9"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG2" name="submitTopology">
+<Signal id="SIG2" name="broadcast">
+<SignalParameterType>int</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB31"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG3" name="submitTopology">
+<SignalParameterType>NetworkTopologyPtr</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB22"/>
 </SendSymbols>
@@ -16,15 +24,10 @@
 <SymbolReference symbolId="SYMB2"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG3" name="alert">
+<Signal id="SIG4" name="mAlert">
 <SendSymbols>
 <SymbolReference symbolId="SYMB33"/>
 </SendSymbols>
-</Signal>
-<Signal id="SIG4" name="broadcast">
-<InputSymbols>
-<SymbolReference symbolId="SYMB31"/>
-</InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process_class" name="pTransportReceiver" scope="current">
 <UsingSymbols>
@@ -32,21 +35,21 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG2"/>
 <SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
 <SignalReference id="SIG2"/>
-<SignalReference id="SIG4"/>
+<SignalReference id="SIG3"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB11"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM3"/>
+<StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB9"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
@@ -54,11 +57,11 @@
 <SymbolReference symbolId="SYMB31"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB2"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM4"/>
+<StateReference itemId="ITEM3"/>
 <SymbolReference symbolId="SYMB5"/>
 </Transition>
 </Transitions>
@@ -73,20 +76,20 @@
 <SymbolReference symbolId="SYMB34"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM3" type="state" name="waitForHello" parentId="ITEM1" scope="none">
+<Item id="ITEM3" type="state" name="waitForTopology" parentId="ITEM1" scope="none">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB12"/>
+<SymbolReference symbolId="SYMB4"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB12"/>
+<SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM4" type="state" name="waitForTopology" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="state" name="waitForHello" parentId="ITEM1" scope="none">
 <DefiningSymbols>
-<SymbolReference symbolId="SYMB4"/>
+<SymbolReference symbolId="SYMB12"/>
 </DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB4"/>
+<SymbolReference symbolId="SYMB12"/>
 </UsingSymbols>
 </Item>
 </DictionaryObjects>

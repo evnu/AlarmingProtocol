@@ -3,123 +3,123 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl-rt" diagramType="sys">
-<Signal id="SIG1" name="broadcast">
-<SignalParameterType>int</SignalParameterType>
-</Signal>
-<Signal id="SIG2" name="unicast">
-<SignalParameterType>int</SignalParameterType>
-</Signal>
-<Signal id="SIG3" name="nodeHello">
-<SignalParameterType>RTDS_QueueId</SignalParameterType>
-</Signal>
-<Signal id="SIG4" name="submitTopology">
+<Signal id="SIG1" name="submitTopology">
 <SignalParameterType>NetworkTopologyPtr</SignalParameterType>
 </Signal>
-<Item id="ITEM1" type="system" name="network" scope="current" usedPackageId="ITEM2">
+<Signal id="SIG2" name="nodeHello">
+<SignalParameterType>RTDS_QueueId</SignalParameterType>
+</Signal>
+<Signal id="SIG3" name="broadcast">
+<SignalParameterType>int</SignalParameterType>
+</Signal>
+<Signal id="SIG4" name="unicast">
+<SignalParameterType>int</SignalParameterType>
+</Signal>
+<Item id="ITEM1" type="system" name="network" scope="current" usedPackageId="ITEM3">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB1"/>
 </UsingSymbols>
 <SignalWindow id="SIGWDW7" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK98" isFrom="TRUE"/>
 <SentSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
 </SentSignals>
 </SignalWindow>
 <SignalWindow id="SIGWDW8" insideDiagram="TRUE">
 <ConnectorReference linkId="LINK90" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
 </SentSignals>
 </SignalWindow>
-<Channel name="cAlarmCh1" fromSignalWindow="SIGWDW1" toSignalWindow="SIGWDW8"/>
-<Channel name="chan" fromSignalWindow="SIGWDW2" toSignalWindow="SIGWDW6"/>
-<Channel name="aChan" fromSignalWindow="SIGWDW3" toSignalWindow="SIGWDW4"/>
-<Channel name="cAlarmCh2" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW5"/>
+<Channel name="aChan" fromSignalWindow="SIGWDW6" toSignalWindow="SIGWDW1"/>
+<Channel name="cAlarmCh2" fromSignalWindow="SIGWDW7" toSignalWindow="SIGWDW2"/>
+<Channel name="chan" fromSignalWindow="SIGWDW5" toSignalWindow="SIGWDW3"/>
+<Channel name="cAlarmCh1" fromSignalWindow="SIGWDW4" toSignalWindow="SIGWDW8"/>
 </Item>
-<Item id="ITEM2" type="package" name="NetworkPackage" scope="top">
+<Item id="ITEM2" type="process" name="Admin" parentId="ITEM1" scope="none" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</DefiningSymbols>
+<UsingSymbols>
+<SymbolReference symbolId="SYMB5"/>
+</UsingSymbols>
+<SignalWindow id="SIGWDW1" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK96" isFrom="FALSE"/>
+<SentSignals>
+<SignalReference id="SIG1"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG2"/>
+</ReceivedSignals>
+</SignalWindow>
 </Item>
-<Item id="ITEM3" type="block_class" name="NodeBlockClass" parentId="ITEM2" scope="none">
+<Item id="ITEM3" type="package" name="NetworkPackage" scope="top">
+</Item>
+<Item id="ITEM4" type="block_class" name="NodeBlockClass" parentId="ITEM3" scope="none">
 <UsingSymbols>
 <SymbolReference symbolId="SYMB3"/>
 <SymbolReference symbolId="SYMB9"/>
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM4" type="block" name="node1" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM3" minInstances="1">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB3"/>
-</DefiningSymbols>
-<SignalWindow id="SIGWDW1" gateName="nodesGW" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK90" isFrom="TRUE"/>
-<ReceivedSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
-</ReceivedSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW2" gateName="nodesGW" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK97" isFrom="TRUE"/>
-<SentSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
-</SentSignals>
-<ReceivedSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
-</ReceivedSignals>
-</SignalWindow>
-<SignalWindow id="SIGWDW3" gateName="aChanGW" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK96" isFrom="TRUE"/>
-<SentSignals>
-<SignalReference id="SIG3"/>
-</SentSignals>
-<ReceivedSignals>
-<SignalReference id="SIG4"/>
-</ReceivedSignals>
-</SignalWindow>
-</Item>
-<Item id="ITEM5" type="process" name="Admin" parentId="ITEM1" scope="none" minInstances="1">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB5"/>
-</DefiningSymbols>
-<UsingSymbols>
-<SymbolReference symbolId="SYMB5"/>
-</UsingSymbols>
-<SignalWindow id="SIGWDW4" insideDiagram="FALSE">
-<ConnectorReference linkId="LINK96" isFrom="FALSE"/>
-<SentSignals>
-<SignalReference id="SIG4"/>
-</SentSignals>
-<ReceivedSignals>
-<SignalReference id="SIG3"/>
-</ReceivedSignals>
-</SignalWindow>
-</Item>
-<Item id="ITEM6" type="block" name="node2" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM3" minInstances="1">
+<Item id="ITEM5" type="block" name="node2" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM4" minInstances="1">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB4"/>
 </DefiningSymbols>
-<SignalWindow id="SIGWDW5" gateName="nodesGW" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW2" gateName="nodesGW" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK98" isFrom="FALSE"/>
 <ReceivedSignals>
-<SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
 </ReceivedSignals>
 </SignalWindow>
-<SignalWindow id="SIGWDW6" gateName="nodesGW" insideDiagram="FALSE">
+<SignalWindow id="SIGWDW3" gateName="nodesGW" insideDiagram="FALSE">
 <ConnectorReference linkId="LINK97" isFrom="FALSE"/>
 <SentSignals>
-<SignalReference id="SIG1"/>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</SignalWindow>
+</Item>
+<Item id="ITEM6" type="block" name="node1" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM4" minInstances="1">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB3"/>
+</DefiningSymbols>
+<SignalWindow id="SIGWDW4" gateName="nodesGW" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK90" isFrom="TRUE"/>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW5" gateName="nodesGW" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK97" isFrom="TRUE"/>
+<SentSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</SentSignals>
+<ReceivedSignals>
+<SignalReference id="SIG3"/>
+<SignalReference id="SIG4"/>
+</ReceivedSignals>
+</SignalWindow>
+<SignalWindow id="SIGWDW6" gateName="aChanGW" insideDiagram="FALSE">
+<ConnectorReference linkId="LINK96" isFrom="TRUE"/>
+<SentSignals>
 <SignalReference id="SIG2"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
-<SignalReference id="SIG2"/>
 </ReceivedSignals>
 </SignalWindow>
 </Item>
-<Item id="ITEM7" type="block" name="node3" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM3" minInstances="1">
+<Item id="ITEM7" type="block" name="node3" parentId="ITEM1" scope="none" instanciatedTypeId="ITEM4" minInstances="1">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB9"/>
 </DefiningSymbols>

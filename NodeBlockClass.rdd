@@ -81,7 +81,7 @@ unicast(int x) see above.
 
 </Link>
 
-<Link linkId="LINK244" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK283" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>chanTS</Text>
 <Connector attachedSymbolId="SYMB2" type="chnl" isOutside="TRUE" side="y" position="-0.5" endType="midarrow">
 <Text id="1">[]</Text>
@@ -113,7 +113,7 @@ unicast(int x) see above.
 
 </Link>
 
-<Link linkId="LINK246" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK282" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>toNodes</Text>
 <Connector attachedSymbolId="SYMB6" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
@@ -124,20 +124,6 @@ unicast(int x) see above.
 <Text id="2">nodesGW</Text>
 </Connector>
 <LinkSegment orientation="v" length="121"/>
-
-</Link>
-
-<Link linkId="LINK243" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>adminChan3</Text>
-<Connector attachedSymbolId="SYMB7" type="chnlgate" isOutside="TRUE" side="x" position="0.647058823529" endType="midarrow">
-<Text id="1">[submitTopology]</Text>
-<Text id="2">adminGW</Text>
-</Connector>
-<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.853823814134" endType="midarrow">
-<Text id="1">[]</Text>
-<Text id="2">aChanGW</Text>
-</Connector>
-<LinkSegment orientation="v" length="209"/>
 
 </Link>
 
@@ -155,7 +141,36 @@ unicast(int x) see above.
 
 </Link>
 
-<Link linkId="LINK245" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK243" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>adminChan3</Text>
+<Connector attachedSymbolId="SYMB7" type="chnlgate" isOutside="TRUE" side="x" position="0.647058823529" endType="midarrow">
+<Text id="1">[submitTopology]</Text>
+<Text id="2">adminGW</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB1" type="chnlgate" isOutside="FALSE" side="s" position="0.853823814134" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">aChanGW</Text>
+</Connector>
+<LinkSegment orientation="v" length="209"/>
+
+</Link>
+
+<Link linkId="LINK248" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cAlarmChannel</Text>
+<Connector attachedSymbolId="SYMB7" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2">tGW</Text>
+</Connector>
+<Connector attachedSymbolId="SYMB3" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[mAlert]</Text>
+<Text id="2">aGW</Text>
+</Connector>
+<LinkSegment orientation="v" length="-165"/>
+<LinkSegment orientation="h" length="-429"/>
+
+</Link>
+
+<Link linkId="LINK284" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>senderReceiverChan</Text>
 <Connector attachedSymbolId="SYMB7" type="chnlgate" isOutside="TRUE" side="y" position="0.666666666667" endType="midarrow">
 <Text id="1">[]</Text>
