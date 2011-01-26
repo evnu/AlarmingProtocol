@@ -3,17 +3,17 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl-rt" diagramType="prcs">
-<Signal id="SIG1" name="nodeHello">
-<SignalParameterType>RTDS_QueueId</SignalParameterType>
-<InputSymbols>
-<SymbolReference symbolId="SYMB7"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG2" name="submitTopology">
+<Signal id="SIG1" name="submitTopology">
 <SignalParameterType>NetworkTopologyPtr</SignalParameterType>
 <SendSymbols>
 <SymbolReference symbolId="SYMB35"/>
 </SendSymbols>
+</Signal>
+<Signal id="SIG2" name="nodeHello">
+<SignalParameterType>RTDS_QueueId</SignalParameterType>
+<InputSymbols>
+<SymbolReference symbolId="SYMB7"/>
+</InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process" name="Admin" scope="current">
 <UsingSymbols>
@@ -21,10 +21,10 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
-<SignalReference id="SIG2"/>
+<SignalReference id="SIG1"/>
 </SentSignals>
 <ReceivedSignals>
-<SignalReference id="SIG1"/>
+<SignalReference id="SIG2"/>
 </ReceivedSignals>
 <Transitions>
 <Transition statesExcluded="FALSE" priorityInputNames="">

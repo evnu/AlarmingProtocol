@@ -4,30 +4,26 @@
 
 <DictionaryObjects language="sdl-rt" diagramType="prcstype">
 <Signal id="SIG1" name="hello">
-<SignalParameterType>BlockMemberPtr</SignalParameterType>
 <InputSymbols>
 <SymbolReference symbolId="SYMB9"/>
 </InputSymbols>
 </Signal>
-<Signal id="SIG2" name="broadcast">
-<SignalParameterType>int</SignalParameterType>
-<InputSymbols>
-<SymbolReference symbolId="SYMB31"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG3" name="alert">
-<SignalParameterType>int</SignalParameterType>
-<SendSymbols>
-<SymbolReference symbolId="SYMB33"/>
-</SendSymbols>
-</Signal>
-<Signal id="SIG4" name="submitTopology">
-<SignalParameterType>NetworkTopologyPtr</SignalParameterType>
+<Signal id="SIG2" name="submitTopology">
 <SendSymbols>
 <SymbolReference symbolId="SYMB22"/>
 </SendSymbols>
 <InputSymbols>
 <SymbolReference symbolId="SYMB2"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG3" name="alert">
+<SendSymbols>
+<SymbolReference symbolId="SYMB33"/>
+</SendSymbols>
+</Signal>
+<Signal id="SIG4" name="broadcast">
+<InputSymbols>
+<SymbolReference symbolId="SYMB31"/>
 </InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process_class" name="pTransportReceiver" scope="current">
@@ -36,8 +32,8 @@
 </UsingSymbols>
 <Body>
 <SentSignals>
+<SignalReference id="SIG2"/>
 <SignalReference id="SIG3"/>
-<SignalReference id="SIG4"/>
 </SentSignals>
 <ReceivedSignals>
 <SignalReference id="SIG1"/>
@@ -54,6 +50,10 @@
 <SymbolReference symbolId="SYMB9"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
+<StateReference itemId="ITEM2"/>
+<SymbolReference symbolId="SYMB31"/>
+</Transition>
+<Transition statesExcluded="FALSE" priorityInputNames="">
 <StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB2"/>
 </Transition>
@@ -61,17 +61,12 @@
 <StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB5"/>
 </Transition>
-<Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
-<SymbolReference symbolId="SYMB31"/>
-</Transition>
 </Transitions>
 </Body>
 </Item>
 <Item id="ITEM2" type="state" name="initialised" parentId="ITEM1" scope="none">
 <DefiningSymbols>
 <SymbolReference symbolId="SYMB30"/>
-<SymbolReference symbolId="SYMB6"/>
 </DefiningSymbols>
 <UsingSymbols>
 <SymbolReference symbolId="SYMB6"/>

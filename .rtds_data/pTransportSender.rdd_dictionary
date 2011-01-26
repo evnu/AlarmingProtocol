@@ -3,14 +3,14 @@
 <!DOCTYPE DictionaryObjects SYSTEM "rtdsDictionaryObjects.dtd">
 
 <DictionaryObjects language="sdl-rt" diagramType="prcstype">
-<Signal id="SIG1" name="hello">
-<InputSymbols>
-<SymbolReference symbolId="SYMB5"/>
-</InputSymbols>
-</Signal>
-<Signal id="SIG2" name="submitTopology">
+<Signal id="SIG1" name="submitTopology">
 <InputSymbols>
 <SymbolReference symbolId="SYMB10"/>
+</InputSymbols>
+</Signal>
+<Signal id="SIG2" name="hello">
+<InputSymbols>
+<SymbolReference symbolId="SYMB5"/>
 </InputSymbols>
 </Signal>
 <Item id="ITEM1" type="process_class" name="pTransportSender" scope="current">
@@ -32,22 +32,19 @@
 <SymbolReference symbolId="SYMB9"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB10"/>
 </Transition>
 <Transition statesExcluded="FALSE" priorityInputNames="">
-<StateReference itemId="ITEM2"/>
+<StateReference itemId="ITEM4"/>
 <SymbolReference symbolId="SYMB12"/>
 </Transition>
 </Transitions>
 </Body>
 </Item>
-<Item id="ITEM2" type="state" name="waitForTopology" parentId="ITEM1" scope="none">
-<DefiningSymbols>
-<SymbolReference symbolId="SYMB8"/>
-</DefiningSymbols>
+<Item id="ITEM2" type="state" name="initialised" parentId="ITEM1" scope="none">
 <UsingSymbols>
-<SymbolReference symbolId="SYMB8"/>
+<SymbolReference symbolId="SYMB11"/>
 </UsingSymbols>
 </Item>
 <Item id="ITEM3" type="state" name="waitForHello" parentId="ITEM1" scope="none">
@@ -58,9 +55,12 @@
 <SymbolReference symbolId="SYMB4"/>
 </UsingSymbols>
 </Item>
-<Item id="ITEM4" type="state" name="initialised" parentId="ITEM1" scope="none">
+<Item id="ITEM4" type="state" name="waitForTopology" parentId="ITEM1" scope="none">
+<DefiningSymbols>
+<SymbolReference symbolId="SYMB8"/>
+</DefiningSymbols>
 <UsingSymbols>
-<SymbolReference symbolId="SYMB11"/>
+<SymbolReference symbolId="SYMB8"/>
 </UsingSymbols>
 </Item>
 </DictionaryObjects>
