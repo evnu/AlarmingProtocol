@@ -26,27 +26,27 @@
 <Text>mAlert(i)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB28" type="sdlCnctrOut" xCenter="242" yCenter="638" fixedDimensions="FALSE" width="132" height="132" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB28" type="sdlCnctrOut" xCenter="242" yCenter="638" fixedDimensions="FALSE" width="66" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>isThereAAlert</Text>
+<Text>lAlert</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB29" type="sdlCnctrIn" xCenter="583" yCenter="187" fixedDimensions="FALSE" width="132" height="132" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB29" type="sdlCnctrIn" xCenter="583" yCenter="88" fixedDimensions="FALSE" width="66" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>isThereAAlert</Text>
+<Text>lAlert</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB30" type="sdlDecision" xCenter="583" yCenter="319" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB30" type="sdlDecision" xCenter="583" yCenter="165" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>i == 0</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB31" type="sdlSendSig" xCenter="583" yCenter="616" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB31" type="sdlSendSig" xCenter="583" yCenter="385" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>mAlert(1) TO_ID myTE</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB32" type="sdlTask" xCenter="583" yCenter="451" fixedDimensions="FALSE" width="132" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB32" type="sdlTask" xCenter="583" yCenter="297" fixedDimensions="FALSE" width="132" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/* send alert.
 if there isn't 
@@ -55,39 +55,24 @@ T ticks, reset
 */</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB33" type="sdlInitTimer" xCenter="583" yCenter="539" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB33" type="sdlInitTimer" xCenter="583" yCenter="462" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>timeout(ticks)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB34" type="sdlState" xCenter="583" yCenter="693" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB34" type="sdlState" xCenter="583" yCenter="539" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>waitForResponse</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB35" type="sdlInputSig" xCenter="583" yCenter="770" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB35" type="sdlInputSig" xCenter="583" yCenter="616" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>*</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB36" type="sdlState" xCenter="583" yCenter="847" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>waitForInitialAlarmMessages</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB37" type="sdlTask" xCenter="825" yCenter="847" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>/* We are sure of the alarm. */</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB38" type="sdlInputSig" xCenter="825" yCenter="770" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB38" type="sdlInputSig" xCenter="825" yCenter="616" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>mAlert (i)</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB39" type="sdlStop" xCenter="825" yCenter="924" fixedDimensions="TRUE" width="24" height="24" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text></Text>
 </Symbol>
 
 <Symbol symbolId="SYMB4" type="sdlStart" xCenter="242" yCenter="143" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
@@ -95,19 +80,31 @@ T ticks, reset
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB40" type="sdlTask" xCenter="803" yCenter="462" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ff0000">
+<Symbol symbolId="SYMB40" type="sdlTask" xCenter="803" yCenter="308" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ff0000">
 <Description></Description>
 <Text>/* This node wasn't
 alarmed yet. Remember
 the sender and tell him
 about an alarm if one happens
-later. */</Text>
+later. 
+Todo this, we need a HoldBackQueue. This would also imply, that
+we need to clear the queue in cases where a false alarm is
+detected. We might just assume that someone else recognizes a
+false alarm (maybe by timeout?). This entity would then send
+a message indicating that this was a false alarm.
+
+*/</Text>
 <ShortcutText>TODO</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB41" type="sdlState" xCenter="803" yCenter="539" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB41" type="sdlState" xCenter="803" yCenter="385" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>waitForInitialAlarmMessages</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB46" type="sdlDecision" xCenter="825" yCenter="693" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>i &gt;= threshold</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB5" type="sdlState" xCenter="242" yCenter="220" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
@@ -172,7 +169,7 @@ int ticks = 1000;</Text>
 
 </Link>
 
-<Link linkId="LINK82" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK145" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB29" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -182,7 +179,7 @@ int ticks = 1000;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="132"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 
@@ -216,23 +213,9 @@ int ticks = 1000;</Text>
 
 </Link>
 
-<Link linkId="LINK102" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK118" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB31" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB34" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="77"/>
-
-</Link>
-
-<Link linkId="LINK98" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB32" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -240,17 +223,31 @@ int ticks = 1000;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK114" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB32" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB31" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
 <LinkSegment orientation="v" length="88"/>
 
 </Link>
 
-<Link linkId="LINK101" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK117" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB33" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB31" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB34" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -288,41 +285,29 @@ int ticks = 1000;</Text>
 
 </Link>
 
-<Link linkId="LINK104" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK146" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB35" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Connector attachedSymbolId="SYMB35" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB36" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB21" type="sdlarrow" isOutside="TRUE" side="y" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="77"/>
+<LinkSegment orientation="h" length="-176"/>
+<LinkSegment orientation="v" length="-165"/>
+<LinkSegment orientation="h" length="-165"/>
 
 </Link>
 
-<Link linkId="LINK111" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text></Text>
-<Connector attachedSymbolId="SYMB37" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<Connector attachedSymbolId="SYMB39" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
-<Text id="1"></Text>
-<Text id="2"></Text>
-</Connector>
-<LinkSegment orientation="v" length="77"/>
-
-</Link>
-
-<Link linkId="LINK109" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK147" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB38" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB37" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB46" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>

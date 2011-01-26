@@ -36,15 +36,6 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB20" type="sdlText" xCenter="638" yCenter="132" fixedDimensions="FALSE" width="176" height="110" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text>/*
-todos
-get msg from app
-forward msg from app
-*/</Text>
-</Symbol>
-
 <Symbol symbolId="SYMB27" type="sdlInputSig" xCenter="572" yCenter="319" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>mAlert(cnt)</Text>
