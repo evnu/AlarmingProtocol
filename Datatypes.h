@@ -19,12 +19,12 @@ enum MessageType {
   Such a message carries the payload from an application layer - Therefore, it is marked
   with the type MessageType and contains either an integer cnt if it is marked as ALERT,
   or a RTDS_QueueId appLayer if marked as FALSEALERT. If such a message is marked REAWAKE,
-  the contained payload isn't initialized and must me ignored.
+  the contained payload isn't initialized and must be ignored.
 */
 typedef struct TransportMessage {
   MessageType mark;
   
-  union payload_t {
+  union {
     int cnt;
     RTDS_QueueId appLayer;
   } payload;
