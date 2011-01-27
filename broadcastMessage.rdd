@@ -43,7 +43,7 @@
 
 <Symbol symbolId="SYMB7" type="sdlText" xCenter="374" yCenter="154" fixedDimensions="FALSE" width="374" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>RefList refs = ptr-&gt;getAllConnectedReferences();
+<Text>RefList refs = nPtr-&gt;getAllConnectedReferences();
 RefListIt it = refs.begin();</Text>
 </Symbol>
 

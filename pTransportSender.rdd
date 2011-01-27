@@ -57,9 +57,9 @@ msg.payload.cnt = cnt;</Text>
 <Text>initialised</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB31" type="sdlPrcdDecl" xCenter="748" yCenter="33" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB31" type="sdlPrcdDecl" xCenter="748" yCenter="33" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>broadcastMessage(NetworkTopologyPtr ptr,
+<Text>broadcastMessage(NetworkTopologyPtr nPtr,
  TransportMessage msg)</Text>
 </Symbol>
 
