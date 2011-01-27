@@ -11,19 +11,34 @@
 <Description></Description>
 <Text></Text>
 
+<Symbol symbolId="SYMB10" type="sdlState" xCenter="143" yCenter="506" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>waitSomeTime</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB11" type="sdlInputSig" xCenter="143" yCenter="583" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>waitBeforeAlarm</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB12" type="sdlSendSig" xCenter="143" yCenter="660" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>broadcast(alarm) VIA cAlarmChannel1</Text>
+</Symbol>
+
+<Symbol symbolId="SYMB13" type="sdlStop" xCenter="143" yCenter="737" fixedDimensions="TRUE" width="24" height="24" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text></Text>
+</Symbol>
+
 <Symbol symbolId="SYMB2" type="sdlStart" xCenter="143" yCenter="110" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB3" type="sdlSendSig" xCenter="154" yCenter="352" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB3" type="sdlSendSig" xCenter="143" yCenter="352" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>broadcast(alarm) VIA cAlarmChannel</Text>
-</Symbol>
-
-<Symbol symbolId="SYMB4" type="sdlStop" xCenter="154" yCenter="429" fixedDimensions="TRUE" width="24" height="24" color="#000000" fillColor="#ffffff">
-<Description></Description>
-<Text></Text>
+<Text>broadcast(alarm) VIA cAlarmChannel1</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB5" type="sdlText" xCenter="187" yCenter="44" fixedDimensions="TRUE" width="352" height="44" color="#000000" fillColor="#ffffff">
@@ -56,7 +71,54 @@ some time.
 <Description></Description>
 <Text>go</Text>
 </Symbol>
+
+<Symbol symbolId="SYMB9" type="sdlInitTimer" xCenter="143" yCenter="429" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>waitBeforeAlarm (1000)</Text>
 </Symbol>
+</Symbol>
+
+<Link linkId="LINK11" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB10" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB11" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK24" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB11" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB12" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK15" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB12" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB13" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
+
+</Link>
 
 <Link linkId="LINK6" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
@@ -72,13 +134,13 @@ some time.
 
 </Link>
 
-<Link linkId="LINK3" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK12" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB3" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB4" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB9" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -100,7 +162,7 @@ some time.
 
 </Link>
 
-<Link linkId="LINK5" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK13" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB8" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -110,9 +172,21 @@ some time.
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="44"/>
-<LinkSegment orientation="h" length="11"/>
-<LinkSegment orientation="v" length="44"/>
+<LinkSegment orientation="v" length="88"/>
+
+</Link>
+
+<Link linkId="LINK10" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB9" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB10" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 </DiagramPartition>

@@ -58,7 +58,7 @@ MESSAGE go;</Text>
 </Link>
 
 <Link linkId="LINK107" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
-<Text>cAlarmChannel</Text>
+<Text>cAlarmChannel1</Text>
 <Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
@@ -69,6 +69,21 @@ MESSAGE go;</Text>
 </Connector>
 <LinkSegment orientation="v" length="99"/>
 <LinkSegment orientation="h" length="220"/>
+
+</Link>
+
+<Link linkId="LINK120" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cAlarmChannel2</Text>
+<Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="x" position="-0.5" endType="midarrow">
+<Text id="1">[]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB4" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[broadcast, unicast]</Text>
+<Text id="2">nodesGW</Text>
+</Connector>
+<LinkSegment orientation="v" length="286"/>
+<LinkSegment orientation="h" length="242"/>
 
 </Link>
 

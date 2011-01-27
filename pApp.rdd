@@ -11,9 +11,9 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB14" type="sdlTask" xCenter="242" yCenter="374" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB14" type="sdlTask" xCenter="242" yCenter="374" fixedDimensions="FALSE" width="418" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>myTE = blockMember-&gt;getBlockMember("transport");</Text>
+<Text>myTE = blockMember-&gt;getBlockMember("transport_sender");</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB21" type="sdlState" xCenter="242" yCenter="429" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
