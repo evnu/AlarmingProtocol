@@ -4,10 +4,10 @@
 
 <Diagram language="sdl-rt" type="class" name="InterfaceDefinition" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
-<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
-<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="42.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB1" type="umlClassDgmFrm" xCenter="538" yCenter="364" fixedDimensions="TRUE" width="1033" height="662" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1" type="umlClassDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 

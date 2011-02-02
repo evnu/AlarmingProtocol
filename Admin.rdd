@@ -4,24 +4,24 @@
 
 <Diagram language="sdl-rt" type="prcs" name="Admin" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
-<DiagramPartition name="Part. 0" nbPagesH="3" nbPagesV="2">
-<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="42.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB1" type="sdlPrcsDgmFrm" xCenter="807" yCenter="728" fixedDimensions="TRUE" width="1571" height="1391" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1" type="sdlPrcsDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlDecision" xCenter="253" yCenter="627" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlDecision" xCenter="253" yCenter="583" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initialCounter &lt; nodeCount</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB13" type="sdlState" xCenter="99" yCenter="737" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB13" type="sdlState" xCenter="99" yCenter="693" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initializationPhase</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB2" type="sdlText" xCenter="121" yCenter="88" fixedDimensions="FALSE" width="242" height="132" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB2" type="sdlText" xCenter="121" yCenter="88" fixedDimensions="FALSE" width="264" height="132" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>int nodeCount = 3;
 double connectivity[3][3] = {
@@ -33,12 +33,12 @@ NetworkTopologyPtr topology;
 NetworkTopology nt;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB3" type="sdlStart" xCenter="253" yCenter="242" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB3" type="sdlStart" xCenter="253" yCenter="198" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB30" type="sdlTask" xCenter="330" yCenter="737" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB30" type="sdlTask" xCenter="330" yCenter="693" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initialCounter = 0;</Text>
 </Symbol>
@@ -57,7 +57,7 @@ for (int i = 0; i &lt; nodeCount; i++) {
 }</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB35" type="sdlSendSig" xCenter="715" yCenter="484" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB35" type="sdlSendSig" xCenter="715" yCenter="484" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>submitTopology(topology) TO_ID receiver</Text>
 </Symbol>
@@ -67,7 +67,7 @@ for (int i = 0; i &lt; nodeCount; i++) {
 <Text>initialCounter++;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB43" type="sdlDecision" xCenter="693" yCenter="187" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB43" type="sdlDecision" xCenter="693" yCenter="187" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initialCounter &lt; nodeCount</Text>
 </Symbol>
@@ -77,12 +77,12 @@ for (int i = 0; i &lt; nodeCount; i++) {
 <Text>submitLoop</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlTask" xCenter="253" yCenter="319" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlTask" xCenter="253" yCenter="275" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>int initialCounter = 0;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB50" type="sdlCnctrIn" xCenter="693" yCenter="66" fixedDimensions="FALSE" width="110" height="110" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB50" type="sdlCnctrIn" xCenter="693" yCenter="66" fixedDimensions="FALSE" width="132" height="132" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>submitLoop</Text>
 </Symbol>
@@ -92,17 +92,17 @@ for (int i = 0; i &lt; nodeCount; i++) {
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="sdlState" xCenter="253" yCenter="396" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlState" xCenter="253" yCenter="352" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initializationPhase</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlInputSig" xCenter="253" yCenter="473" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlInputSig" xCenter="253" yCenter="429" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>nodeHello(nodeTE)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlTask" xCenter="253" yCenter="550" fixedDimensions="FALSE" width="374" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlTask" xCenter="253" yCenter="506" fixedDimensions="FALSE" width="396" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>nt.setIdReferenceMapping(initialCounter, nodeTE);
 initialCounter++;</Text>
@@ -111,7 +111,7 @@ initialCounter++;</Text>
 
 <Link linkId="LINK19" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>true</Text>
-<Connector attachedSymbolId="SYMB10" type="void" isOutside="TRUE" side="x" position="-0.666666666667" endType="voidend">
+<Connector attachedSymbolId="SYMB10" type="void" isOutside="TRUE" side="x" position="-0.615384615385" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -125,11 +125,11 @@ initialCounter++;</Text>
 
 <Link linkId="LINK93" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>false</Text>
-<Connector attachedSymbolId="SYMB10" type="void" isOutside="TRUE" side="x" position="0.5" endType="voidend">
+<Connector attachedSymbolId="SYMB10" type="void" isOutside="TRUE" side="x" position="0.461538461538" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB30" type="sdlarrow" isOutside="TRUE" side="x" position="-0.142857142857" endType="arrow">
+<Connector attachedSymbolId="SYMB30" type="sdlarrow" isOutside="TRUE" side="x" position="-0.125" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -151,21 +151,19 @@ initialCounter++;</Text>
 
 </Link>
 
-<Link linkId="LINK101" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK150" type="sbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
-<Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Connector attachedSymbolId="SYMB30" type="void" isOutside="TRUE" side="y" position="0.0" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB43" type="sdlarrow" isOutside="TRUE" side="x" position="0.0" endType="arrow">
+<Connector attachedSymbolId="SYMB43" type="sdlarrow" isOutside="TRUE" side="y" position="0.0" endType="arrow">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="44"/>
-<LinkSegment orientation="h" length="110"/>
-<LinkSegment orientation="v" length="-660"/>
-<LinkSegment orientation="h" length="253"/>
-<LinkSegment orientation="v" length="66"/>
+<LinkSegment orientation="h" length="132"/>
+<LinkSegment orientation="v" length="-506"/>
+<LinkSegment orientation="h" length="231"/>
 
 </Link>
 

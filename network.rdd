@@ -4,10 +4,10 @@
 
 <Diagram language="sdl-rt" type="sys" name="network" showMsgData="full" linksCrossingAllowed="FALSE" cellWidthMm="4">
 
-<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
-<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="42.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
-<Symbol symbolId="SYMB1" type="sdlSysDgmFrm" xCenter="538" yCenter="364" fixedDimensions="TRUE" width="1033" height="662" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1" type="sdlSysDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
@@ -43,13 +43,13 @@ MESSAGE go;</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK119" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK124" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>init</Text>
 <Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[go]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.435045317221" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.516129032258" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
@@ -57,7 +57,7 @@ MESSAGE go;</Text>
 
 </Link>
 
-<Link linkId="LINK107" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK122" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cAlarmChannel1</Text>
 <Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[]</Text>
@@ -72,7 +72,7 @@ MESSAGE go;</Text>
 
 </Link>
 
-<Link linkId="LINK120" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK121" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cAlarmChannel2</Text>
 <Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="x" position="-0.5" endType="midarrow">
 <Text id="1">[]</Text>
@@ -87,7 +87,7 @@ MESSAGE go;</Text>
 
 </Link>
 
-<Link linkId="LINK97" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK123" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>chan</Text>
 <Connector attachedSymbolId="SYMB3" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[broadcast,unicast]</Text>
@@ -101,7 +101,7 @@ MESSAGE go;</Text>
 
 </Link>
 
-<Link linkId="LINK96" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK125" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>aChan</Text>
 <Connector attachedSymbolId="SYMB3" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[submitTopology]</Text>

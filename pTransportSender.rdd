@@ -4,14 +4,14 @@
 
 <Diagram language="sdl-rt" type="prcstype" name="pTransportSender" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
-<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="2">
-<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="60.0" pageHeight="42.0" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
 
-<Symbol symbolId="SYMB1" type="sdlPrcsTypeDgmFrm" xCenter="538" yCenter="728" fixedDimensions="TRUE" width="1033" height="1391" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1" type="sdlPrcsTypeDgmFrm" xCenter="822" yCenter="538" fixedDimensions="TRUE" width="1600" height="1011" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlInputSig" xCenter="220" yCenter="429" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlInputSig" xCenter="220" yCenter="429" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>submitTopology(topology)</Text>
 </Symbol>
@@ -36,18 +36,18 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB27" type="sdlInputSig" xCenter="572" yCenter="319" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB27" type="sdlInputSig" xCenter="572" yCenter="319" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>mAlert(cnt)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB28" type="sdlTask" xCenter="572" yCenter="396" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB28" type="sdlTask" xCenter="572" yCenter="396" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>msg.mark = ALERT;
 msg.payload.cnt = cnt;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB29" type="sdlPrcdCall" xCenter="572" yCenter="473" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB29" type="sdlPrcdCall" xCenter="572" yCenter="473" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>broadcastMessage(topology, msg)</Text>
 </Symbol>
@@ -57,13 +57,20 @@ msg.payload.cnt = cnt;</Text>
 <Text>initialised</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB31" type="sdlPrcdDecl" xCenter="748" yCenter="33" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB31" type="sdlPrcdDecl" xCenter="748" yCenter="33" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>broadcastMessage(NetworkTopologyPtr nPtr,
  TransportMessage msg)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlState" xCenter="220" yCenter="198" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB37" type="sdlComment" xCenter="748" yCenter="165" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ff0000">
+<Description></Description>
+<Text>/* 
+allow the message to be sent only to certain processes (exclude previous sender or ...) */</Text>
+<ShortcutText>/* TODO */</ShortcutText>
+</Symbol>
+
+<Symbol symbolId="SYMB4" type="sdlState" xCenter="220" yCenter="198" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>waitForHello</Text>
 </Symbol>
@@ -73,7 +80,7 @@ msg.payload.cnt = cnt;</Text>
 <Text>hello(blockMember)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="418" yCenter="66" fixedDimensions="FALSE" width="220" height="110" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="418" yCenter="66" fixedDimensions="FALSE" width="242" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>BlockMember* blockMember;
 NetworkTopologyPtr topology;
@@ -82,7 +89,7 @@ RTDS_QueueId receiver;
 TransportMessage msg;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB8" type="sdlState" xCenter="220" yCenter="352" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB8" type="sdlState" xCenter="220" yCenter="352" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>waitForTopology</Text>
 </Symbol>
@@ -174,6 +181,22 @@ TransportMessage msg;</Text>
 <Text id="2"></Text>
 </Connector>
 <LinkSegment orientation="v" length="77"/>
+
+</Link>
+
+<Link linkId="LINK16" type="dbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB29" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB37" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-44"/>
+<LinkSegment orientation="h" length="176"/>
+<LinkSegment orientation="v" length="-264"/>
 
 </Link>
 

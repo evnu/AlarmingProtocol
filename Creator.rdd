@@ -4,10 +4,10 @@
 
 <Diagram language="sdl-rt" type="prcs" name="Creator" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
-<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="2">
-<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="42.0" pageHeight="29.7" topMargin="1.5" bottomMargin="1.5" leftMargin="1.0" rightMargin="1.0" pageFooter="TRUE"/>
 
-<Symbol symbolId="SYMB1" type="sdlPrcsDgmFrm" xCenter="538" yCenter="728" fixedDimensions="TRUE" width="1033" height="1391" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB1" type="sdlPrcsDgmFrm" xCenter="566" yCenter="364" fixedDimensions="TRUE" width="1089" height="662" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
 

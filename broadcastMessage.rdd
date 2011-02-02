@@ -4,8 +4,8 @@
 
 <Diagram language="sdl-rt" type="prcd" name="broadcastMessage" showMsgData="full" linksCrossingAllowed="TRUE" cellWidthMm="4">
 
-<DiagramPartition name="Part. 0" nbPagesH="2" nbPagesV="1">
-<PageSpecification pageWidth="21.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
+<DiagramPartition name="Part. 0" nbPagesH="1" nbPagesV="1">
+<PageSpecification pageWidth="42.0" pageHeight="29.7" topMargin="0.0" bottomMargin="0.0" leftMargin="0.0" rightMargin="0.0" pageFooter="FALSE"/>
 
 <Symbol symbolId="SYMB2" type="sdlPrcdDgmFrm" xCenter="595" yCenter="420" fixedDimensions="TRUE" width="1146" height="775" color="#000000" fillColor="#ffffff">
 <Description></Description>
@@ -28,7 +28,7 @@
 
 <Symbol symbolId="SYMB3" type="sdlPrcdProto" xCenter="242" yCenter="66" fixedDimensions="TRUE" width="462" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>broadcastMessage(NetworkTopologyPtr ptr, TransportMessage msg)</Text>
+<Text>broadcastMessage(NetworkTopologyPtr nPtr, TransportMessage msg)</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB4" type="sdlPrcdStart" xCenter="209" yCenter="209" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
