@@ -70,7 +70,7 @@ citebordercolor={1 1 1} % set to white
 \theoremsymbol{$\square$}
 
 % glossar
-\usepackage[toc]{glossaries}
+%\usepackage[toc]{glossaries}
 
 % slashbox - describe column and row in cell
 \usepackage{slashbox}
@@ -79,7 +79,7 @@ citebordercolor={1 1 1} % set to white
 % Title Page
 \title{Implementierung eines Alamierungsprotokolls}
 \author{Kai Warncke, Sven Draband, Magnus Müller \\
-{warncke, draband, mamuelle}@informatik.hu-berlin.de
+\{warncke, draband, mamuelle\}@informatik.hu-berlin.de
 }
 
 \begin{document}
@@ -97,7 +97,19 @@ citebordercolor={1 1 1} % set to white
       \item (GPS-Koordinaten/Knoten)
       \item Distributed Hash Table durch reaktives Routing erlaubt jedem Knoten
         festzustellen, ob andere Knoten vorhanden sind
-      \item (Alle Knoten haben mehr als $\geq n$ links
+      \item (Alle Knoten haben mehr als $\geq n$ links)
     \end{itemize}
 \section{Anforderungen}
+\begin{enumerate}
+  \item Das Protokoll sollte möglichst wenig Nachrichten versenden.\footnote{Die
+    Versendung der Pakete über WLAN sollte möglichst schnell funktionieren. Daher sollte
+    ein Knoten möglichst selten den physikalischen Kanal blockieren.}
+    \label{anf:min_msg}
+  \item Da die links zwischen zwei Knoten flüchtig sind und verschwinden können, könnten
+    Nachrichten des Protokolls verloren gehen. Wir gehen davon aus, dass in dem Falle eine
+    darunterliegende Netzwerkschicht das Paket erneut versendet.
+    \label{anf:tcp}
+\end{enumerate}
+
+\section{Ausblick}
 \end{document}
