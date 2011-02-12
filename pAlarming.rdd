@@ -23,7 +23,7 @@
 
 <Symbol symbolId="SYMB12" type="sdlSendSig" xCenter="143" yCenter="660" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>broadcast(alarm) VIA cAlarmChannel1</Text>
+<Text>broadcast(alarm) VIA cAlarmChannel2</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB13" type="sdlStop" xCenter="143" yCenter="737" fixedDimensions="TRUE" width="24" height="24" color="#000000" fillColor="#ffffff">
@@ -34,6 +34,15 @@
 <Symbol symbolId="SYMB2" type="sdlStart" xCenter="143" yCenter="110" fixedDimensions="TRUE" width="60" height="25" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text></Text>
+</Symbol>
+
+<Symbol symbolId="SYMB21" type="sdlComment" xCenter="429" yCenter="506" fixedDimensions="FALSE" width="330" height="88" color="#000000" fillColor="#ff0000">
+<Description></Description>
+<Text>The testsuite should 
+receive the receiving nodes
+as from the Admin process.
+NOTE: SDL-RT refuses to accept the channels
+as unique identifiers</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB3" type="sdlSendSig" xCenter="143" yCenter="352" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">

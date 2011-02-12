@@ -16,7 +16,7 @@
 <Text>transportLayerSender = blockMember-&gt;getBlockMember("transport_sender");</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB21" type="sdlState" xCenter="242" yCenter="429" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB21" type="sdlState" xCenter="242" yCenter="429" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initialAlert</Text>
 </Symbol>
@@ -26,12 +26,12 @@
 <Text>mAlert(i)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB28" type="sdlCnctrOut" xCenter="242" yCenter="594" fixedDimensions="FALSE" width="88" height="88" color="#000000" fillColor="#ffaaff">
+<Symbol symbolId="SYMB28" type="sdlCnctrOut" xCenter="242" yCenter="594" fixedDimensions="FALSE" width="66" height="66" color="#000000" fillColor="#ffaaff">
 <Description></Description>
 <Text>lAlert</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB29" type="sdlCnctrIn" xCenter="715" yCenter="99" fixedDimensions="FALSE" width="88" height="88" color="#000000" fillColor="#ffaaff">
+<Symbol symbolId="SYMB29" type="sdlCnctrIn" xCenter="715" yCenter="99" fixedDimensions="FALSE" width="66" height="66" color="#000000" fillColor="#ffaaff">
 <Description></Description>
 <Text>lAlert</Text>
 </Symbol>
@@ -41,12 +41,12 @@
 <Text>i == 0</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB31" type="sdlSendSig" xCenter="715" yCenter="396" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB31" type="sdlSendSig" xCenter="715" yCenter="396" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>mAlert(1) TO_ID transportLayerSender</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB32" type="sdlTask" xCenter="715" yCenter="308" fixedDimensions="FALSE" width="154" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB32" type="sdlTask" xCenter="715" yCenter="308" fixedDimensions="FALSE" width="132" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>/* send alert.
 if there isn't 
@@ -55,12 +55,12 @@ T ticks, reset
 */</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB33" type="sdlInitTimer" xCenter="715" yCenter="473" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB33" type="sdlInitTimer" xCenter="715" yCenter="473" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>timeout(DEFINITIONS_TIMEOUTLENGTH)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB34" type="sdlState" xCenter="715" yCenter="550" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB34" type="sdlState" xCenter="715" yCenter="550" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>waitForResponse</Text>
 </Symbol>
@@ -70,7 +70,7 @@ T ticks, reset
 <Text>*</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB38" type="sdlInputSig" xCenter="957" yCenter="627" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB38" type="sdlInputSig" xCenter="957" yCenter="627" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>mAlert (i)</Text>
 </Symbol>
@@ -94,29 +94,29 @@ a message indicating that this was a false alarm.
 <ShortcutText>TODO</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB41" type="sdlState" xCenter="935" yCenter="396" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB41" type="sdlState" xCenter="935" yCenter="396" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initialAlert</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB46" type="sdlDecision" xCenter="957" yCenter="704" fixedDimensions="FALSE" width="308" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB46" type="sdlDecision" xCenter="957" yCenter="704" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>i &gt;= DEFINITIONS_THRESHOLD</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlState" xCenter="242" yCenter="220" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlState" xCenter="242" yCenter="220" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>appWaitForInit</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB50" type="sdlComment" xCenter="1232" yCenter="495" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#55ff55">
+<Symbol symbolId="SYMB50" type="sdlComment" xCenter="1232" yCenter="495" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#55ff55">
 <Description></Description>
 <Text>If the threshold isn't
 reached, wait for more</Text>
 <ShortcutText>Wait for threshold</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB51" type="sdlComment" xCenter="583" yCenter="715" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ff0000">
+<Symbol symbolId="SYMB51" type="sdlComment" xCenter="583" yCenter="715" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ff0000">
 <Description></Description>
 <Text>If we didn't reach the threshold or someone
 already send the message FALSE_ALERT, 
@@ -124,12 +124,12 @@ abort and resend FALSE_ALERT.</Text>
 <ShortcutText>Threshold not reached</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB53" type="sdlState" xCenter="957" yCenter="781" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB53" type="sdlState" xCenter="957" yCenter="781" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSleep</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB54" type="sdlComment" xCenter="1232" yCenter="770" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#00ff00">
+<Symbol symbolId="SYMB54" type="sdlComment" xCenter="1232" yCenter="770" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#00ff00">
 <Description></Description>
 <Text>If we reached the threshold, we
 can't do anything anymore. Lets
@@ -138,22 +138,22 @@ is received.</Text>
 <ShortcutText>Threshold reached</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB55" type="sdlState" xCenter="825" yCenter="814" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB55" type="sdlState" xCenter="825" yCenter="814" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>sSleep</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB56" type="sdlInputSig" xCenter="825" yCenter="891" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB56" type="sdlInputSig" xCenter="825" yCenter="891" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>mReawake(dump)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB57" type="sdlState" xCenter="825" yCenter="968" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB57" type="sdlState" xCenter="825" yCenter="968" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initialAlert</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB58" type="sdlComment" xCenter="561" yCenter="66" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#00ffaa">
+<Symbol symbolId="SYMB58" type="sdlComment" xCenter="561" yCenter="66" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#00ffaa">
 <Description></Description>
 <Text>Change into the 
 "Possibly Earthquake"
@@ -161,7 +161,7 @@ state</Text>
 <ShortcutText>Incoming Earthquake?</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB59" type="sdlComment" xCenter="1188" yCenter="176" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB59" type="sdlComment" xCenter="1188" yCenter="176" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>We are suspecting that others
 might tell us about an incoming
@@ -171,7 +171,7 @@ isn't reached in time.</Text>
 <ShortcutText>Wait for more information</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB6" type="sdlText" xCenter="154" yCenter="66" fixedDimensions="FALSE" width="308" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB6" type="sdlText" xCenter="154" yCenter="66" fixedDimensions="FALSE" width="264" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>BlockMember* blockMember;
 RTDS_QueueId transportLayerSender;
@@ -179,12 +179,12 @@ int i;
 int dump;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB61" type="sdlState" xCenter="561" yCenter="627" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB61" type="sdlState" xCenter="561" yCenter="627" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>initialAlert</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB63" type="sdlComment" xCenter="1045" yCenter="880" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB63" type="sdlComment" xCenter="1045" yCenter="880" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>SDL-RT is useless.</Text>
 </Symbol>
@@ -196,6 +196,15 @@ increment alert message
  
  */</Text>
 <ShortcutText>TODO</ShortcutText>
+</Symbol>
+
+<Symbol symbolId="SYMB67" type="sdlComment" xCenter="418" yCenter="506" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ff0000">
+<Description></Description>
+<Text>We should use a constant indicating the maximum hop count which one alarm message is allowed to travel.
+Because are multicasting anyway, this won't hurt the possible area which is passed with multiple messages.
+We can safely assume that the alarm must be "rethrown" within reach of N hops or otherwise assume that
+this was a false alarm.</Text>
+<ShortcutText>TODO MAXHOPS</ShortcutText>
 </Symbol>
 
 <Symbol symbolId="SYMB7" type="sdlInputSig" xCenter="242" yCenter="297" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
@@ -420,7 +429,7 @@ increment alert message
 
 <Link linkId="LINK152" type="dec" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>false</Text>
-<Connector attachedSymbolId="SYMB46" type="void" isOutside="TRUE" side="x" position="0.785714285714" endType="voidend">
+<Connector attachedSymbolId="SYMB46" type="void" isOutside="TRUE" side="x" position="0.916666666667" endType="voidend">
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
@@ -593,6 +602,21 @@ increment alert message
 <LinkSegment orientation="v" length="-66"/>
 <LinkSegment orientation="h" length="341"/>
 <LinkSegment orientation="v" length="-44"/>
+
+</Link>
+
+<Link linkId="LINK237" type="dbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text></Text>
+<Connector attachedSymbolId="SYMB67" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB31" type="void" isOutside="TRUE" side="y" position="1.0" endType="voidend">
+<Text id="1"></Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="v" length="-88"/>
+<LinkSegment orientation="h" length="297"/>
 
 </Link>
 
