@@ -11,49 +11,55 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlPrcs" xCenter="165" yCenter="187" fixedDimensions="TRUE" width="132" height="44" color="#000000" fillColor="#c1a3c1">
+<Symbol symbolId="SYMB10" type="sdlPrcs" xCenter="209" yCenter="99" fixedDimensions="TRUE" width="132" height="44" color="#000000" fillColor="#c1a3c1">
 <Description></Description>
 <Text>pAlarming</Text>
 <ShortcutText>Testsuite</ShortcutText>
 </Symbol>
 
+<Symbol symbolId="SYMB15" type="sdlBlkTypeInst" xCenter="990" yCenter="143" fixedDimensions="TRUE" width="286" height="88" color="#000000" fillColor="#ffffff">
+<Description></Description>
+<Text>node3 : NodeBlockClass</Text>
+</Symbol>
+
 <Symbol symbolId="SYMB2" type="sdlInherits" xCenter="88" yCenter="33" fixedDimensions="FALSE" width="176" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>USE NetworkPackage;
-MESSAGE go;</Text>
+MESSAGE go;
+MESSAGE getTopology;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB3" type="sdlBlkTypeInst" xCenter="462" yCenter="275" fixedDimensions="TRUE" width="286" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB3" type="sdlBlkTypeInst" xCenter="616" yCenter="374" fixedDimensions="TRUE" width="286" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>node1 : NodeBlockClass</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlBlkTypeInst" xCenter="462" yCenter="473" fixedDimensions="TRUE" width="286" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB4" type="sdlBlkTypeInst" xCenter="616" yCenter="594" fixedDimensions="TRUE" width="286" height="88" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>node2 : NodeBlockClass</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlPrcs" xCenter="462" yCenter="88" fixedDimensions="FALSE" width="66" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlPrcs" xCenter="616" yCenter="99" fixedDimensions="TRUE" width="66" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>Admin</Text>
 </Symbol>
 </Symbol>
 
-<Link linkId="LINK175" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK254" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>init</Text>
 <Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
 <Text id="1">[go]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.516129032258" endType="midarrow">
+<Connector attachedSymbolId="SYMB1" type="chnl" isOutside="FALSE" side="w" position="-0.743225806452" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="h" length="-176"/>
+<LinkSegment orientation="h" length="-209"/>
 
 </Link>
 
-<Link linkId="LINK176" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK283" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cAlarmChannel1</Text>
 <Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="x" position="0.5" endType="midarrow">
 <Text id="1">[]</Text>
@@ -63,27 +69,41 @@ MESSAGE go;</Text>
 <Text id="1">[broadcast, unicast]</Text>
 <Text id="2">nodesGW</Text>
 </Connector>
-<LinkSegment orientation="v" length="99"/>
-<LinkSegment orientation="h" length="264"/>
+<LinkSegment orientation="v" length="286"/>
+<LinkSegment orientation="h" length="374"/>
 
 </Link>
 
-<Link linkId="LINK174" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK284" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>cAlarmChannel2</Text>
-<Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="x" position="-0.333333333333" endType="midarrow">
+<Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="x" position="-0.5" endType="midarrow">
 <Text id="1">[]</Text>
 <Text id="2"></Text>
 </Connector>
-<Connector attachedSymbolId="SYMB4" type="chnlgate" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Connector attachedSymbolId="SYMB4" type="chnlgate" isOutside="TRUE" side="y" position="0.5" endType="midarrow">
 <Text id="1">[broadcast, unicast]</Text>
 <Text id="2">nodesGW</Text>
 </Connector>
-<LinkSegment orientation="v" length="286"/>
-<LinkSegment orientation="h" length="319"/>
+<LinkSegment orientation="v" length="517"/>
+<LinkSegment orientation="h" length="440"/>
 
 </Link>
 
-<Link linkId="LINK123" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK282" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Text>cReceiver</Text>
+<Connector attachedSymbolId="SYMB10" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[submitTopology]</Text>
+<Text id="2"></Text>
+</Connector>
+<Connector attachedSymbolId="SYMB5" type="chnl" isOutside="TRUE" side="y" position="0.0" endType="midarrow">
+<Text id="1">[getTopology]</Text>
+<Text id="2"></Text>
+</Connector>
+<LinkSegment orientation="h" length="407"/>
+
+</Link>
+
+<Link linkId="LINK180" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>chan</Text>
 <Connector attachedSymbolId="SYMB3" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[broadcast,unicast]</Text>
@@ -93,11 +113,11 @@ MESSAGE go;</Text>
 <Text id="1">[broadcast, unicast]</Text>
 <Text id="2">nodesGW</Text>
 </Connector>
-<LinkSegment orientation="v" length="198"/>
+<LinkSegment orientation="v" length="220"/>
 
 </Link>
 
-<Link linkId="LINK125" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK249" type="chnl" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text>aChan</Text>
 <Connector attachedSymbolId="SYMB3" type="chnlgate" isOutside="TRUE" side="x" position="0.0" endType="midarrow">
 <Text id="1">[submitTopology]</Text>
@@ -107,7 +127,7 @@ MESSAGE go;</Text>
 <Text id="1">[nodeHello]</Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="-187"/>
+<LinkSegment orientation="v" length="-275"/>
 
 </Link>
 </DiagramPartition>
