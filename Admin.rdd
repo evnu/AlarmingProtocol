@@ -107,9 +107,9 @@ for (int i = 0; i &lt; nodeCount; i++) {
 <Text>getTopology</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB68" type="sdlSendSig" xCenter="1441" yCenter="473" fixedDimensions="FALSE" width="286" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB68" type="sdlSendSig" xCenter="1441" yCenter="473" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>submitTopology(topology) TO_ID SENDER</Text>
+<Text>submitNT(nt) TO_ID SENDER</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB69" type="sdlState" xCenter="1441" yCenter="550" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">
