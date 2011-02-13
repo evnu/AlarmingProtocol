@@ -100,9 +100,9 @@ some time.
 <Text>go</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB9" type="sdlInitTimer" xCenter="440" yCenter="462" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB9" type="sdlInitTimer" xCenter="440" yCenter="462" fixedDimensions="FALSE" width="176" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>waitBeforeAlarm (1000)</Text>
+<Text>waitBeforeAlarm (10)</Text>
 </Symbol>
 </Symbol>
 
