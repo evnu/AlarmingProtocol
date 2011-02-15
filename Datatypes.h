@@ -5,6 +5,11 @@
 typedef std::list<RTDS_QueueId> RefList;
 typedef RefList::iterator RefListIt;
 
+#include <set>
+typedef std::set<RTDS_QueueId> RefSet;
+typedef RefSet::iterator RefSetIt;
+
+
 /* we need to wrap alarming messages */
 enum MessageType {
    ALERT      /* Message tells about suspected alarm */
@@ -21,15 +26,35 @@ enum MessageType {
   or a RTDS_QueueId appLayer if marked as FALSEALERT. If such a message is marked REAWAKE,
   the contained payload isn't initialized and must be ignored.
 */
-typedef struct TransportMessage {
+struct TransportMessage {
   MessageType mark;
   
-  union {
+  union _payload {
     int cnt;
     RTDS_QueueId appLayer;
+    
+    _payload (int cnt):
+      cnt(cnt) {}
+    _payload (RTDS_QueueId appLayer):
+      appLayer (appLayer) {}
+    _payload (): cnt(0) {}
   } payload;
   
-} TransportMessage;
+  RefList processes;
+  
+  TransportMessage (MessageType mark, int cnt):
+    mark (mark)
+    , payload (cnt)
+   {}
+   
+   TransportMessage (MessageType mark, RTDS_QueueId id):
+    mark (mark)
+    , payload (id)
+   {}
+   
+   TransportMessage ()
+   {}
+};
 
 
 #endif
