@@ -64,7 +64,7 @@ msg.hops = hops;</Text>
  TransportMessage msg)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB37" type="sdlComment" xCenter="748" yCenter="165" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ff0000">
+<Symbol symbolId="SYMB37" type="sdlComment" xCenter="748" yCenter="264" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ff0000">
 <Description></Description>
 <Text>/* 
 allow the message to be sent only to certain processes (exclude previous sender or ...) */</Text>
@@ -126,7 +126,7 @@ RefList processes;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="88"/>
+<LinkSegment orientation="v" length="99"/>
 
 </Link>
 
@@ -168,7 +168,7 @@ RefList processes;</Text>
 <Text id="1"></Text>
 <Text id="2"></Text>
 </Connector>
-<LinkSegment orientation="v" length="88"/>
+<LinkSegment orientation="v" length="77"/>
 
 </Link>
 
@@ -186,7 +186,7 @@ RefList processes;</Text>
 
 </Link>
 
-<Link linkId="LINK16" type="dbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
+<Link linkId="LINK46" type="dbvoid" textSegmentNum="0" color="#000000" reverseRead="FALSE" oriented="TRUE">
 <Text></Text>
 <Connector attachedSymbolId="SYMB29" type="void" isOutside="TRUE" side="x" position="0.0" endType="voidend">
 <Text id="1"></Text>
@@ -198,7 +198,7 @@ RefList processes;</Text>
 </Connector>
 <LinkSegment orientation="v" length="-44"/>
 <LinkSegment orientation="h" length="176"/>
-<LinkSegment orientation="v" length="-264"/>
+<LinkSegment orientation="v" length="-165"/>
 
 </Link>
 
