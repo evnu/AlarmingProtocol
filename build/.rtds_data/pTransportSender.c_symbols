@@ -1,4 +1,4 @@
-z:\alarmingprotocol\rtds-network-vorlage\network.rdp	validname	192.168.199.10	win32
+z:\alarmingprotocol\rtds-network-vorlage\network.rdp	validname	192.168.199.126	win32
 33	38	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB7
 64	64	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB2
 64	65	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB4
@@ -9,6 +9,6 @@ z:\alarmingprotocol\rtds-network-vorlage\network.rdp	validname	192.168.199.10	wi
 168	170	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB11
 170	174	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB12
 178	183	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB27
-183	185	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB28
-185	186	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB29
-186	188	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB30
+183	186	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB28
+186	187	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB29
+187	189	Z:\AlarmingProtocol\rtds-network-vorlage\pTransportSender.rdd	SYMB30

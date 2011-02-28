@@ -61,9 +61,10 @@
 <Text>sWaitForGo</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB5" type="sdlText" xCenter="187" yCenter="44" fixedDimensions="TRUE" width="352" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB5" type="sdlText" xCenter="187" yCenter="33" fixedDimensions="TRUE" width="352" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>TransportMessage alarm = {ALERT,0};
+<Text>TransportMessage alarm = {ALERT,0,
+ DEFINITIONS_MAXHOPS};
 NetworkTopology topology;
 RTDS_QueueId node1, node2;</Text>
 </Symbol>

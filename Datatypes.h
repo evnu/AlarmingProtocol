@@ -29,6 +29,8 @@ typedef struct TransportMessage {
     RTDS_QueueId appLayer;
   } payload;
   
+  int hops;
+  
 } TransportMessage;
 
 

@@ -11,7 +11,7 @@
 <Description></Description>
 <Text></Text>
 
-<Symbol symbolId="SYMB10" type="sdlInputSig" xCenter="220" yCenter="429" fixedDimensions="FALSE" width="220" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB10" type="sdlInputSig" xCenter="220" yCenter="429" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>submitTopology(topology)</Text>
 </Symbol>
@@ -36,18 +36,19 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB27" type="sdlInputSig" xCenter="572" yCenter="319" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB27" type="sdlInputSig" xCenter="572" yCenter="319" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>mAlert(cnt)</Text>
+<Text>mAlert(cnt, hops)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB28" type="sdlTask" xCenter="572" yCenter="396" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB28" type="sdlTask" xCenter="572" yCenter="396" fixedDimensions="FALSE" width="176" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>msg.mark = ALERT;
-msg.payload.cnt = cnt;</Text>
+msg.payload.cnt = cnt;
+msg.hops = hops;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB29" type="sdlPrcdCall" xCenter="572" yCenter="473" fixedDimensions="FALSE" width="264" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB29" type="sdlPrcdCall" xCenter="572" yCenter="473" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>broadcastMessage(topology, msg)</Text>
 </Symbol>
@@ -57,20 +58,20 @@ msg.payload.cnt = cnt;</Text>
 <Text>initialised</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB31" type="sdlPrcdDecl" xCenter="748" yCenter="33" fixedDimensions="FALSE" width="352" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB31" type="sdlPrcdDecl" xCenter="748" yCenter="33" fixedDimensions="FALSE" width="330" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>broadcastMessage(NetworkTopologyPtr nPtr,
  TransportMessage msg)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB37" type="sdlComment" xCenter="748" yCenter="165" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ff0000">
+<Symbol symbolId="SYMB37" type="sdlComment" xCenter="748" yCenter="165" fixedDimensions="FALSE" width="88" height="44" color="#000000" fillColor="#ff0000">
 <Description></Description>
 <Text>/* 
 allow the message to be sent only to certain processes (exclude previous sender or ...) */</Text>
 <ShortcutText>/* TODO */</ShortcutText>
 </Symbol>
 
-<Symbol symbolId="SYMB4" type="sdlState" xCenter="220" yCenter="198" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB4" type="sdlState" xCenter="220" yCenter="198" fixedDimensions="FALSE" width="110" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>waitForHello</Text>
 </Symbol>
@@ -80,16 +81,16 @@ allow the message to be sent only to certain processes (exclude previous sender 
 <Text>hello(blockMember)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB7" type="sdlText" xCenter="418" yCenter="66" fixedDimensions="FALSE" width="242" height="88" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB7" type="sdlText" xCenter="418" yCenter="66" fixedDimensions="FALSE" width="220" height="110" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>BlockMember* blockMember;
 NetworkTopologyPtr topology;
-int cnt;
+int cnt, hops;
 RTDS_QueueId receiver;
 TransportMessage msg;</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB8" type="sdlState" xCenter="220" yCenter="352" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB8" type="sdlState" xCenter="220" yCenter="352" fixedDimensions="FALSE" width="132" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>waitForTopology</Text>
 </Symbol>
