@@ -40,21 +40,9 @@ struct TransportMessage {
     _payload (): cnt(0) {}
   } payload;
   
-  RefList processes;
+  int hops;
   
-  TransportMessage (MessageType mark, int cnt):
-    mark (mark)
-    , payload (cnt)
-   {}
-   
-   TransportMessage (MessageType mark, RTDS_QueueId id):
-    mark (mark)
-    , payload (id)
-   {}
-   
-   TransportMessage ()
-   {}
-};
+} TransportMessage;
 
 
 #endif

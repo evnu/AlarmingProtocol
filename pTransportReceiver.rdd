@@ -61,8 +61,8 @@ appLayer = blockMember-&gt;getBlockMember("app");</Text>
 <Symbol symbolId="SYMB33" type="sdlSendSig" xCenter="627" yCenter="638" fixedDimensions="FALSE" width="242" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>mAlert(message.payload.cnt, 
-message.processes
-) TO_ID appLayer</Text>
+message.hops) 
+TO_ID appLayer</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB34" type="sdlState" xCenter="1023" yCenter="770" fixedDimensions="FALSE" width="44" height="44" color="#000000" fillColor="#ffffff">

@@ -36,16 +36,16 @@
 <Text></Text>
 </Symbol>
 
-<Symbol symbolId="SYMB27" type="sdlInputSig" xCenter="572" yCenter="308" fixedDimensions="FALSE" width="198" height="44" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB27" type="sdlInputSig" xCenter="572" yCenter="319" fixedDimensions="FALSE" width="154" height="44" color="#000000" fillColor="#ffffff">
 <Description></Description>
-<Text>mAlert(cnt, processes)</Text>
+<Text>mAlert(cnt, hops)</Text>
 </Symbol>
 
-<Symbol symbolId="SYMB28" type="sdlTask" xCenter="572" yCenter="385" fixedDimensions="FALSE" width="220" height="66" color="#000000" fillColor="#ffffff">
+<Symbol symbolId="SYMB28" type="sdlTask" xCenter="572" yCenter="396" fixedDimensions="FALSE" width="176" height="66" color="#000000" fillColor="#ffffff">
 <Description></Description>
 <Text>msg.mark = ALERT;
 msg.payload.cnt = cnt;
-msg.processes = processes;</Text>
+msg.hops = hops;</Text>
 </Symbol>
 
 <Symbol symbolId="SYMB29" type="sdlPrcdCall" xCenter="572" yCenter="473" fixedDimensions="FALSE" width="242" height="44" color="#000000" fillColor="#ffffff">
@@ -85,7 +85,7 @@ allow the message to be sent only to certain processes (exclude previous sender 
 <Description></Description>
 <Text>BlockMember* blockMember;
 NetworkTopologyPtr topology;
-int cnt;
+int cnt, hops;
 RTDS_QueueId receiver;
 TransportMessage msg;
 RefList processes;</Text>
